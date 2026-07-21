@@ -1,0 +1,145 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "8bd34463dd9c800b990a",
+  "displayName": "Executive Dashboard",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1b36f99b0456b68cc8f9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim Store"
+              }
+            },
+            "Property": "store_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough",
+        "isLockedInViewMode": true
+      },
+      {
+        "name": "bb756e20478dde746599",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim Store"
+              }
+            },
+            "Property": "Store_country"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough",
+        "isLockedInViewMode": true
+      },
+      {
+        "name": "48ad45a1beb32f3b2312",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim Product"
+              }
+            },
+            "Property": "product_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough",
+        "isLockedInViewMode": true
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "e8797524e22cccf453d8",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "778d78c9f6a462e3a990",
+        "boundFilter": "1b36f99b0456b68cc8f9",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim Store"
+              }
+            },
+            "Property": "store_name"
+          }
+        }
+      },
+      {
+        "name": "a08d7b99eca7ca0876cf",
+        "boundFilter": "bb756e20478dde746599",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim Store"
+              }
+            },
+            "Property": "Store_country"
+          }
+        }
+      },
+      {
+        "name": "409294717ee6e29c47e8",
+        "boundFilter": "48ad45a1beb32f3b2312",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim Product"
+              }
+            },
+            "Property": "product_name"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F5F5F5'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "backgroundColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F5F5F5'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "type": "Drillthrough"
+}
